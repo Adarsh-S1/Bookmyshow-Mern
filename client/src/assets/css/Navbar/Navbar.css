@@ -1,0 +1,156 @@
+header{
+  background: #222539;
+}
+body{
+  font-family: Roboto,sans-serif;
+}
+.search{
+  margin-top: 26px;
+  margin-left: 10px;
+  position: absolute;
+}
+
+#upper{
+  height :64px;
+  background: #333545;
+}
+#logo{
+  margin-left: 40px;
+}
+#navbar_upper{
+  float:right;
+}
+#navbar_ur{
+  float: right;
+}
+#region_button button{
+  background: none;
+  border: none;
+  color: #CCCCCC;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 5px;
+  padding-right: 15px;
+  line-height: 19px;
+}
+#region_button button:hover{
+  color:white;
+}
+#region_button button:focus{
+  outline :none;
+  border:none;
+  box-shadow: none;
+}
+#signin_button button{
+  background: #f84464;
+  border-color: #f84464;
+font-size: 12px;
+border-radius: 4px;
+margin-top: 5px;
+width: 70px;
+
+}
+
+#navbar_ur svg{
+  fill:white;
+  width: 60px;
+  height: 14px;
+  margin-top: 15px;
+  outline:none;
+}
+
+#lower{
+  background: #222539 !important;
+  height: 40px;
+}
+#upper div{
+  display: inline-block;
+}
+#navbar_left a{
+  color: #CCCCCC;
+  padding: 0px 10px;
+  font-size: 14.5px;
+  font-weight: 400;
+  text-decoration: none;
+
+}
+#navbar_left a:hover{
+  color:white;
+}
+#header1 form{
+    width: 270%;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    line-height: 33px;
+    margin-top:10px;
+}
+#navbar_right{
+  float: right;
+}
+#navbar_right a{
+  color: #fafafa;
+  padding: 0px 9px;
+  font-size: 13px;
+  font-weight: 400;
+  text-decoration: none;
+
+}
+sup{
+  color:red;
+}
+#header2{
+  display: none;
+}
+#header2_nav{
+  height: 64px;
+  background:#2e3147 ;
+}
+#header2_nav div{
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin-left: 15px;
+}
+#region_button2 button{
+  background: none;
+  border: none;
+  color: #CCCCCC;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  margin-top: -45px;
+  margin-left: -25px;
+  color: rgb(204, 204, 204);
+  height: 20px;
+}
+#region_button2 button:focus{
+  outline :none;
+  border:none;
+  box-shadow: none;
+}
+#search_icon{
+  float: right;
+  margin-top: -45px;
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 830px){
+  #header2{
+    display:block;
+  }
+  #header1{
+    display: none;
+  }
+  header{
+    margin-top: 0px;
+  }
+}
+@media only screen and (max-width: 1000px){
+  #header1 form{
+    width: 200%;
+  }
+  #header1{
+    margin-top: 64px;
+  }
+}
