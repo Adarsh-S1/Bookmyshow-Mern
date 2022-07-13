@@ -1,0 +1,36 @@
+.navigationparent {
+  display: flex;
+ position: fixed;
+Width: 100%;
+bottom: 0;
+color: #f84464;
+padding-top: 5px;
+  border-top: 1px solid #dddcdc;
+}
+.myhome{
+    margin-left: 50px;
+}
+.myhome img{
+    margin-left: 3px;
+}
+.myprofile span {
+    font-size: 12px;
+    
+}
+ .myhome span{
+    font-size: 12px;
+}
+.myprofile {
+  margin-left: auto;
+  margin-right: 50px;
+  order: 2;
+}
+.myprofile img{
+   padding-left: 4px;
+}
+
+@media (min-width: 550px) {
+    .navigationparent{
+        display: none;
+    }
+}

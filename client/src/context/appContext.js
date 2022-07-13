@@ -9,10 +9,9 @@ const Appcontext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-
   const toggleSidebar = () => {
-    dispatch({type:TOGGLE_SIDEBAR})
-  }
+    dispatch({ type: TOGGLE_SIDEBAR });
+  };
   return (
     <Appcontext.Provider
       value={{

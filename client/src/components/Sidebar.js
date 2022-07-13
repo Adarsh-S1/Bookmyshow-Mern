@@ -8,6 +8,7 @@ import {
   SidebarHeader,
   Menu,
   MenuItem,
+  SidebarFooter,
 } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
 import "../assets/css/Navbar/Sidebar.css";
@@ -25,11 +26,22 @@ const Sidebar = () => {
         collapsedWidth="0px"
       >
         <SidebarHeader>
-          <center>
-            <img src="logo192.png" alt="logo" height="80" width="132" />
-          </center>
-        </SidebarHeader>
-        <SidebarContent>
+          <div className="sidebarheader">
+            <img
+             
+              src="https://in.bmscdn.com/webin/movies/superstar/profile_avatar.png"
+              alt=""
+             
+            />
+            <h3 className="sidebaruser">
+              ! Hey Adarsh <br />
+              <small>
+                {" "}
+                <MdOutlineKeyboardArrowRight />
+                Edit profile{" "}
+              </small>{" "}
+            </h3>
+          </div>
           <div className="loginsidebar">
             <div className="loginsidebarbutton">Login / Register</div>
             <div className="giftsidebar">
@@ -40,6 +52,8 @@ const Sidebar = () => {
               alt=""
             />
           </div>
+        </SidebarHeader>
+        <SidebarContent className="sidebarmenu">
           <Menu innerSubMenuArrows={true}>
             <MenuItem
               suffix={<AiOutlineBell />}
@@ -123,6 +137,11 @@ const Sidebar = () => {
             </MenuItem>
           </Menu>
         </SidebarContent>
+        <SidebarFooter>
+          <div className="loginsidebar">
+            <div className="logoutsidebarbutton">Sign Out</div>
+          </div>
+        </SidebarFooter>
       </ProSidebar>
     </div>
   );

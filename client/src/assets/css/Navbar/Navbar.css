@@ -73,7 +73,9 @@ width: 70px;
   font-size: 14.5px;
   font-weight: 400;
   text-decoration: none;
-
+}
+.toggle{
+  cursor: pointer;
 }
 #navbar_left a:hover{
   color:white;

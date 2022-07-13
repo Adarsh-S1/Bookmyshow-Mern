@@ -4,7 +4,7 @@ import { useAppContext } from "../context/appContext";
 
 
 const Navbar = () => {
-  const { toggleSidebar,showSidebar } = useAppContext()
+  const { toggleSidebar} = useAppContext()
   return (
     <>
       <link
@@ -14,7 +14,7 @@ const Navbar = () => {
         crossOrigin="anonymous"
       ></link>
 
-      <header onClick={!showSidebar?toggleSidebar:console.log() } id="header1">
+      <header id="header1">
         <div id="upper">
           <div id="logo">
             <img src="logo192.png" alt="logo" height="70" width="132" />
@@ -63,8 +63,8 @@ const Navbar = () => {
                     </div>
                   </li>
                   <li>
-                    <a onClick={toggleSidebar}>
-                      <svg viewBox="0 0 100 80" width="40" height="40">
+                    <a className="toggle" onClick={toggleSidebar}>
+                      <svg  viewBox="0 0 100 80" width="40" height="40">
                         <rect width="120" height="10"></rect>
                         <rect y="30" width="120" height="10"></rect>
                         <rect y="60" width="120" height="10"></rect>
