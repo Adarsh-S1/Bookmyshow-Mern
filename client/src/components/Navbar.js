@@ -1,7 +1,7 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import "../assets/css/Navbar/Navbar.css";
 import { useAppContext } from "../context/appContext";
-
 
 const Navbar = () => {
   const { toggleSidebar} = useAppContext()
@@ -17,7 +17,9 @@ const Navbar = () => {
       <header id="header1">
         <div id="upper">
           <div id="logo">
-            <img src="logo192.png" alt="logo" height="70" width="132" />
+            <Link to="/">
+              <img src="logo192.png" alt="logo" height="70" width="132" />
+            </Link>
 
             <img
               src="images/Navbar/search.svg"
@@ -63,13 +65,13 @@ const Navbar = () => {
                     </div>
                   </li>
                   <li>
-                    <a className="toggle" onClick={toggleSidebar}>
-                      <svg  viewBox="0 0 100 80" width="40" height="40">
+                    <div className="toggle" onClick={toggleSidebar}>
+                      <svg viewBox="0 0 100 80" width="40" height="40">
                         <rect width="120" height="10"></rect>
                         <rect y="30" width="120" height="10"></rect>
                         <rect y="60" width="120" height="10"></rect>
                       </svg>
-                    </a>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -82,15 +84,15 @@ const Navbar = () => {
             <div className="container-fluid">
               <ul id="navbar_left" className="nav navbar-nav">
                 <li>
-                  <a href="#">Movies</a>
+                  <Link to="/list-movies">Movies</Link>
                 </li>
                 <li>
-                  <a href="#">My Shows</a>
+                  <Link to="/booked-shows">My Shows</Link>
                 </li>
                 <li>
-                  <a href="#">
+                  <Link to="/list-stream-movies">
                     Stream<sup>NEW</sup>
-                  </a>
+                  </Link>
                 </li>
               </ul>
               <ul id="navbar_right" className="nav navbar-nav">
@@ -99,15 +101,12 @@ const Navbar = () => {
                   id="collapsibleNavbar"
                 >
                   <li>
-                    <a href="#">
+                    <Link to="/theatre-login">
                       ListYourShow<sup>NEW</sup>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#">Offers</a>
-                  </li>
-                  <li>
-                    <a href="#">Gift Cards</a>
+                    <Link to="/offers">Offers</Link>
                   </li>
                 </div>
               </ul>
@@ -133,14 +132,12 @@ const Navbar = () => {
               </button>
             </div>
             <div id="search_icon">
-              <a href="#">
-                <img
-                  alt=""
-                  src="images/Navbar/search.svg"
-                  height="25"
-                  width="20"
-                />
-              </a>
+              <img
+                alt=""
+                src="images/Navbar/search.svg"
+                height="25"
+                width="20"
+              />
             </div>
           </div>
         </div>

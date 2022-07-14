@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import { AiOutlineBell } from "react-icons/ai";
 import { MdOutlineKeyboardArrowRight, MdOutlineSettings } from "react-icons/md";
 import { BsChatDots } from "react-icons/bs"
@@ -28,10 +29,8 @@ const Sidebar = () => {
         <SidebarHeader>
           <div className="sidebarheader">
             <img
-             
               src="https://in.bmscdn.com/webin/movies/superstar/profile_avatar.png"
               alt=""
-             
             />
             <h3 className="sidebaruser">
               ! Hey Adarsh <br />
@@ -62,6 +61,7 @@ const Sidebar = () => {
             >
               Notifications
             </MenuItem>
+
             <MenuItem
               suffix={
                 <img
@@ -74,11 +74,13 @@ const Sidebar = () => {
               className="notifications"
               icon={<MdOutlineKeyboardArrowRight />}
             >
+              <Link to="/purchase-history" />
               Purchase History <br />
               <span className="menuspan">
                 View all your bookings & purchase history
               </span>
             </MenuItem>
+
             <MenuItem
               suffix={
                 <img
@@ -91,15 +93,18 @@ const Sidebar = () => {
               className="notifications"
               icon={<MdOutlineKeyboardArrowRight />}
             >
+              <Link to="/stream-library" />
               Stream Library
               <br />
               <span className="menuspan">Rented & Purchased movies</span>
             </MenuItem>
+
             <MenuItem
               suffix={<BsChatDots />}
               className="notifications"
               icon={<MdOutlineKeyboardArrowRight />}
             >
+              <Link to="/chat" />
               Help & Support
               <br />
               <span className="menuspan">
@@ -111,6 +116,7 @@ const Sidebar = () => {
               className="notifications"
               icon={<MdOutlineKeyboardArrowRight />}
             >
+              <Link to="/profile" />
               Account & Settings
               <br />
               <span className="menuspan">
@@ -129,6 +135,7 @@ const Sidebar = () => {
               className="notifications"
               icon={<MdOutlineKeyboardArrowRight />}
             >
+              <Link to="/offers" />
               Rewards
               <br />
               <span className="menuspan">
