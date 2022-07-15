@@ -1,19 +1,21 @@
-import React from 'react'
+import React from "react";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
-
+import "../assets/css/Homebanner/Homebanner.css"
 const Homebanner = () => {
   return (
-    <>
+    <div className="swiperbanner">
       <Swiper
-        spaceBetween={30}
+        scrollbar={{ draggable: true }}
+        slidesPerView={1.04}
+     spaceBetween={10}
+        loop={true}
         centeredSlides={true}
         autoplay={{
           delay: 2500,
-          disableOnInteraction: false,
+          disableOnInteraction: true,
         }}
         pagination={{
           clickable: true,
@@ -22,17 +24,27 @@ const Homebanner = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
-      </Swiper></>
-  )
-}
+        <SwiperSlide>
+          <img
+            src="https://assets-in.bmscdn.com/promotions/cms/creatives/1657199545852_webthor.jpg"
+            alt=""
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://assets-in.bmscdn.com/promotions/cms/creatives/1657541125625_freeaccess_web.jpg"
+            alt=""
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://assets-in.bmscdn.com/promotions/cms/creatives/1657108204582_restaurantweb.jpg"
+            alt=""
+          />
+        </SwiperSlide>
+      </Swiper>
+    </div>
+  );
+};
 
-export default Homebanner
+export default Homebanner;
