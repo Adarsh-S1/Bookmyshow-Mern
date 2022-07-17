@@ -22,7 +22,7 @@ const Navbar = () => {
             </Link>
 
             <img
-              src="/images/Navbar/search.svg"
+              src="/user/Navbar/search.svg"
               alt="logo"
               height="15"
               width="auto"
@@ -134,7 +134,7 @@ const Navbar = () => {
             <div id="search_icon">
               <img
                 alt=""
-                src="/images/Navbar/search.svg"
+                src="/user/Navbar/search.svg"
                 height="25"
                 width="20"
               />

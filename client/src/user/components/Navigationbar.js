@@ -6,7 +6,7 @@ const Navigationbar = () => {
     <div className="navigationparent">
       <div className="myhome">
         <Link to="/" style={{ color: "inherit", textDecoration: "inherit" }}>
-          <img src="images/Navbar/my.svg" alt="" height="25px" width="auto" />
+          <img src="/user/Navbar/my.svg" alt="" height="25px" width="auto" />
           <br />
           <span>Home</span>
         </Link>
@@ -17,7 +17,7 @@ const Navigationbar = () => {
           style={{ color: "inherit", textDecoration: "inherit" }}
         >
           <img
-            src="/images/Navbar/profile.svg"
+            src="/user/Navbar/profile.svg"
             alt=""
             height="25px"
             width="auto"

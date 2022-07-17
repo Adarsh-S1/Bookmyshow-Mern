@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import "../assets/css/Recommended/Recommended.css";
 const Otherlanguages = () => {
     return (
-      <div style={{ paddingTop: "80px" }}   className="recommended">
+      <div style={{ paddingTop: "50px" }} className="recommended">
         <h1>Other languages</h1>
         <Swiper
           slidesPerView={5}
@@ -90,6 +90,7 @@ const Otherlanguages = () => {
             </div>
           </SwiperSlide>
         </Swiper>
+        <br /> <br /> <br /> <br />
       </div>
     );
 };

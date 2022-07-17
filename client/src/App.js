@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Error from "./pages/Error.js";
-import Home from "./pages/Home.js";
-import SharedLayout from "./pages/SharedLayout.js";
+import Error from "./user/pages/Error.js";
+import Home from "./user/pages/Home.js";
+import SharedLayout from "./user/pages/SharedLayout.js";
 function App() {
   return (
     <BrowserRouter>

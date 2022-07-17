@@ -10,15 +10,15 @@ import Entertainment from '../components/Entertainment';
 const Home = () => {
 
   return (
-    <div style={{backgroundColor:"#f4f4f4"}}>
+    <div style={{ backgroundColor: "#f4f4f4" }}>
       <Homebanner />
-      <Ads/>
-      <Recommended/>
+      <Ads />
+      <Recommended />
       <Navigationbar />
       <Streambanner />
-      <Entertainment/>
+      <Entertainment />
+      <Streammovies />
       <Otherlanguages />
-      <Streammovies/>
     </div>
   );
 }

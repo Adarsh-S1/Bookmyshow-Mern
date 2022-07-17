@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BsFacebook, BsYoutube } from "react-icons/bs";
-import { AiFillTwitterCircle, AiFillYoutube } from "react-icons/ai";
+import { BsFacebook } from "react-icons/bs";
+import { AiFillTwitterCircle } from "react-icons/ai";
 import { GrPinterest } from "react-icons/gr";
 import "../assets/css/Footer/Footer.css";
 
@@ -937,7 +937,7 @@ const Footer = () => {
           <div id="vertical_line">
             <hr />
             <Link to="">
-              <img alt="" src="logo192.png" height="75" width="auto" />
+              <img alt="" src="/logo192.png" height="75" width="auto" />
             </Link>
             <hr />
           </div>
