@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import "../assets/css/Recommended/Recommended.css";
 const Streammovies = () => {
   return (
-    <div style={{paddingTop:"80px"}}  className="recommended">
+    <div style={{ paddingTop: "80px" }} className="recommended">
       <h1>Stream Movies</h1>
       <Swiper
         slidesPerView={5}
@@ -90,6 +90,12 @@ const Streammovies = () => {
           </div>
         </SwiperSlide>
       </Swiper>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 };

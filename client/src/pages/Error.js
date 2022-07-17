@@ -5,13 +5,13 @@ const Error = () => {
   return (
     <div className="Errorparent">
   
-        <img className="img-fluid" src="images/Error/robot.png" alt="" />
+        <img className="img-fluid" src="/images/Error/robot.png" alt="" />
  
       <div className="errordetails">
         <center>
           {" "}
           <h1 style={{ fontSize: "200px", fontFamily: "'Suwannaphum', serif" }}>
-            4<img  className='errorimg img-fluid' src="images/Error/404.png" alt="" srcset="" />4 !
+            4<img  className='errorimg img-fluid' src="/images/Error/404.png" alt="" />4 !
           </h1>
         </center>
         <center>

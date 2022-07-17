@@ -18,11 +18,11 @@ const Navbar = () => {
         <div id="upper">
           <div id="logo">
             <Link to="/">
-              <img src="logo192.png" alt="logo" height="70" width="132" />
+              <img src="/logo192.png" alt="logo" height="70" width="132" />
             </Link>
 
             <img
-              src="images/Navbar/search.svg"
+              src="/images/Navbar/search.svg"
               alt="logo"
               height="15"
               width="auto"
@@ -134,7 +134,7 @@ const Navbar = () => {
             <div id="search_icon">
               <img
                 alt=""
-                src="images/Navbar/search.svg"
+                src="/images/Navbar/search.svg"
                 height="25"
                 width="20"
               />

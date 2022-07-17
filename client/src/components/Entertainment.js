@@ -8,7 +8,7 @@ import "../assets/css/Recommended/Recommended.css";
 const Entertainment = () => {
   return (
     <div style={{ paddingTop: "40px" }} className="entertainment recommended">
-      <h1>Stream Movies</h1>
+      <h1>The Best Of Entertainment</h1>
       <Swiper
         slidesPerView={5}
         spaceBetween={30}

@@ -17,7 +17,7 @@ const Navigationbar = () => {
           style={{ color: "inherit", textDecoration: "inherit" }}
         >
           <img
-            src="images/Navbar/profile.svg"
+            src="/images/Navbar/profile.svg"
             alt=""
             height="25px"
             width="auto"
