@@ -1,3 +1,4 @@
-PORT = 5000
-DB_NAME = "bookmyshow"
-DB_URL = "mongodb://localhost:27017";
+import { StatusCodes } from "http-status-codes";
+
+const errorHandlerMiddleware = (err, req, res, next) => { }
+export default errorHandlerMiddleware;

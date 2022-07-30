@@ -37,8 +37,8 @@
 }
 .recommended h1 {
   font-size: 23px;
-  letter-spacing: -0.1px;
-  font-weight: 900;
+  color: #4e4b48;
+  font-weight: 600;
 }
 .recommended img {
   border-radius: 3%;
@@ -75,13 +75,13 @@
   width: 0%;
   color: rgb(34, 34, 34);
   font-size: 17.5px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.13;
 }
 .recommendedmovie span {
  float: left;
   color: #686868;
-  font-size: 15.5px;
+  font-size: 16px;
   line-height: 1.33;
 }
 :root .recommended {

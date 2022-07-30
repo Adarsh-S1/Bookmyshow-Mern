@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+.moviebanner {
+  background: linear-gradient(
+      90deg,
+      rgb(26, 26, 26) 24.97%,
+      rgb(26, 26, 26) 38.3%,
+      rgba(26, 26, 26, 0.04) 97.47%,
+      rgb(26, 26, 26) 100%
+    ),
+    url("https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/kaduva-et00330368-02-06-2022-04-30-06.jpg");
+  min-height: 480px;
+  padding: 32px 50px;
+  -webkit-box-align: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.moviecard {
+  cursor: pointer;
+  position: absolute;
+}
+
+.moviecard img {
+  width: auto;
+  cursor: pointer;
+  height: 392px;
+  border-radius: 16px;
+}
+.moviecard span {
+  color: #fff;
+  font-size: 11.6px;
+  font-weight: 600;
+  background: rgb(0, 0, 0);
+  border-radius: 0px 0px 16px 16px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  padding: 4px 0px 4px 0px;
+  width: 100%;
+}
+
+.moviecard Button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-weight: 600;
+  transform: translate(-50%, -50%);
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  background: rgba(34, 34, 34, 0.8);
+  box-shadow: rgb(0 0 0 / 16%) 0px 1px 8px;
+  border-color: rgba(34, 34, 34, 0.8);
+  border-radius: 24px;
+  padding: 1px 8px;
+}
+.moviecard Button:hover {
+  background: #f84464;
+  box-shadow: #f84464 0px 1px 8px;
+  border-color: #f84464;
+}
+.moviedetails {
+  cursor: pointer;
+  color: #fff;
+  left: 295px;
+  top: 25px;
+  position: relative;
+}
+.movierating {
+  display: flex;
+  margin-top: 27px;
+}
+.movierating h4 {
+  font-weight: 600;
+}
+.moviedetails h1 {
+  font-size: 35px;
+  font-weight: 700;
+}
+.movierating span {
+  padding-top: 5px;
+  font-size: 15px;
+}
+.ratingboard {
+  background-color: #333333;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 15px 0px 0px 25px;
+  display: flex;
+  width: 38%;
+  height: 80px;
+}
+.ratingboard1 {
+  width: 70%;
+}
+.ratingboard1 h6 {
+  font-size: 18px;
+}
+.ratingboard span {
+  color: #bdc8cc;
+}
+.ratingboard Button {
+  background-color: #fff;
+  color: #343434;
+  border-color: #fff;
+  font-weight: 500;
+  margin-top: 3px;
+  border-radius: 8px;
+  font-size: 17px;
+}
+.ratingboard Button:hover {
+  background-color: #fff;
+  color: #343434;
+  border-color: #fff;
+}
+.languages {
+  color: #40424c;
+  background-color: #fff;
+  font-weight: 500;
+  margin-top: 20px;
+  border-radius: 2px;
+  padding: 10px 10px 10px 10px;
+  width: fit-content;
+  height: 40px;
+}
+.genre{
+  margin-top: 20px;
+  font-size: 16px;
+  margin-left: 3px;
+}
+
+
+.booktickets Button{
+   margin-top: 20px;
+  font-weight: 700;
+  background: #f84464;
+  border-color: #f84464;
+  border-radius: 10px;
+  padding: 10px 70px;
+}
+.booktickets Button:hover {
+  background: #f84464;
+  box-shadow: #f84464 0px 1px 8px;
+  border-color: #f84464;
+}
