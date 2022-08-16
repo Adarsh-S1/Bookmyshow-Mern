@@ -1,5 +1,5 @@
 import React from 'react'
-import "../assets/css/Ads/Ads.css";
+import "../css/Ads/Ads.css";
 const Ads = () => {
   return (
     <h2>

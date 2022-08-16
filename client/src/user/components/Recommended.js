@@ -4,7 +4,7 @@ import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "../assets/css/Recommended/Recommended.css";
+import "../css/Recommended/Recommended.css";
 
 const Recommended = () => {
   return (

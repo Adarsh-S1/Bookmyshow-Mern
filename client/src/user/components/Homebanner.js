@@ -3,7 +3,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import "../assets/css/Homebanner/Homebanner.css"
+import "../css/Homebanner/Homebanner.css"
 const Homebanner = () => {
   return (
     <div className="swiperbanner">

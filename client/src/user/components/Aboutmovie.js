@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import { StickyContainer, Sticky } from "react-sticky";
 import ScrollTrigger from "react-scroll-trigger";
-import "../assets/css/Moviedetails/Aboutmovie.css";
+import "../css/Moviedetails/Aboutmovie.css";
 import Offers from "./Offers";
 import Cast from "./Cast";
 import Reviewsslide from "./Reviewsslide";

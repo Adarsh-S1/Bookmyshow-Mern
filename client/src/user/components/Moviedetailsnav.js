@@ -4,7 +4,7 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "../assets/css/Moviedetails/Aboutmovie.css";
+import "../css/Moviedetails/Aboutmovie.css";
 const Moviedetailsnav = () => {
   return (
     <div className="moviedetailsnav1">

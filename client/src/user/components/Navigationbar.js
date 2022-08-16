@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../assets/css/Navbar/Navigationbar.css";
+import "../css/Navbar/Navigationbar.css";
 const Navigationbar = () => {
   return (
     <div className="navigationparent">

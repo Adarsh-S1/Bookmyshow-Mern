@@ -1,0 +1,125 @@
+.registerParent {
+  margin: 50px 0px 20px 40px;
+}
+.registerParent h3 {
+  color: #292121;
+  font-weight: 700;
+  font-size: 35px;
+}
+.registerParent h6 {
+  color: #5b5454;
+  padding-bottom: 20px;
+  padding-top: 5px;
+}
+.registerParent input {
+  border-top-style: hidden;
+  background-color: #ffffff;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: ridge;
+  width: 400px;
+  border-color: #929090;
+}
+.registerParent ::-webkit-datetime-edit {
+  color: #6b6969;
+  font-weight: 600;
+  opacity: 0.8;
+}
+.registerParent select {
+  margin-left: 20.2%;
+  border-top-style: hidden;
+  background-color: #ffffff;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom: 2px;
+  border-bottom-style: ridge;
+  width: 400px;
+  border-color: #6b6969;
+}
+.registerParent select:focus,
+input:focus {
+  outline: none;
+}
+.registerParent ::placeholder,
+.registerParent select {
+  color: #4d4a4a;
+  font-weight: 600;
+  opacity: 0.8;
+}
+.input2 {
+  margin-left: 7%;
+  width: 300px !important;
+}
+
+.input1 {
+  margin-left: 20%;
+}
+
+.otherdetails {
+  padding-top: 50px;
+}
+
+.address1 {
+  padding-top: 50px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.registerParent input:focus ~ .floating-label,
+.registerParent input:not(:focus):valid ~ .floating-label {
+  font-size: 14px;
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  margin-top: -20px;
+  padding-left: 40px;
+  color: #f84464;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.floating-label {
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  padding-left: 45px;
+  color: #6b6969;
+  font-weight: 600;
+  transition: 0.2s ease all;
+}
+
+.input1:focus ~ .floating-label1,
+.input1:not(:focus):valid ~ .floating-label1 {
+  font-size: 14px;
+  position: absolute;
+  pointer-events: none;
+  left: 51%;
+  margin-top: -20px;
+  padding-left: 40px;
+  color: #f84464;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.floating-label1 {
+  position: absolute;
+  pointer-events: none;
+  left: 51.5%;
+  padding-left: 45px;
+  color: #6b6969;
+  font-weight: 600;
+  transition: 0.2s ease all;
+}
+.dob{
+     padding-top: 40px;
+}
+input[type="date"]::-webkit-datetime-edit{ 
+    color:#514f4f ;
+}
+input[type="date"]::-webkit-datetime-edit:placeholder-shown{ 
+    color:#fff !important ;
+}
+

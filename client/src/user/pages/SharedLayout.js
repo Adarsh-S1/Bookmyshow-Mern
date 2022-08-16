@@ -16,12 +16,12 @@ const SharedLayout = () => {
         <Navbar />
       </div>
       <div onClick={!showSidebar ? toggleSidebar : console.log()}>
-        <Online>
+        {/* <Online> */}
           <Outlet />
-        </Online>
-        <Offline>
+        {/* </Online> */}
+        {/* <Offline>
           <InternetError />
-        </Offline>
+        </Offline> */}
       </div>
       <Footer />
     </div>

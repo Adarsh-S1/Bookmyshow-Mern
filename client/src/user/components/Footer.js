@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { BsFacebook } from "react-icons/bs";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { GrPinterest } from "react-icons/gr";
-import "../assets/css/Footer/Footer.css";
+import "../css/Footer/Footer.css";
 
 const Footer = () => {
   return (

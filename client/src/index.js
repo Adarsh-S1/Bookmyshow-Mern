@@ -13,8 +13,7 @@ const options = {
 };
 root.render(
   <React.StrictMode>
-    
-    <AppProvider>
+    <AppProvider >
       <Provider template={AlertTemplate} {...options} >
       <App />
     </Provider>

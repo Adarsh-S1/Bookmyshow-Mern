@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/css/Moviedetails/Aboutmovie.css";
+import "../css/Moviedetails/Aboutmovie.css";
 
 const Moviedescription = () => {
   return (

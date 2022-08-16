@@ -1,19 +1,29 @@
 import React from "react";
-import {Link} from "react-router-dom"
-import "../assets/css/Navbar/Navbar.css";
+import { Link } from "react-router-dom"
+import { CSSTransition } from "react-transition-group";
+import "../css/Navbar/Navbar.css";
+import "../css/Login/Login.css";
 import { useAppContext } from "../context/appContext";
+import Login from "./Login";
 
 const Navbar = () => {
-  const { toggleSidebar} = useAppContext()
+  const { toggleSidebar,toggleSignin,showSignin} = useAppContext()
   return (
     <>
-      <link 
+      <link
         rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
         crossOrigin="anonymous"
       ></link>
-
+      <CSSTransition
+        in={!showSignin}
+        timeout={200}
+        classNames="logintransition"
+        unmountOnExit
+      >
+        <Login />
+      </CSSTransition>
       <header id="header1">
         <div id="upper">
           <div id="logo">
@@ -58,7 +68,7 @@ const Navbar = () => {
                     </div>
                   </li>
                   <li>
-                    <div id="signin_button">
+                    <div onClick={toggleSignin} id="signin_button">
                       <button type="button" className="btn btn-primary">
                         Sign in
                       </button>

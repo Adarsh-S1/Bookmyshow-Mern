@@ -12,7 +12,7 @@ import {
   SidebarFooter,
 } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
-import "../assets/css/Navbar/Sidebar.css";
+import "../css/Navbar/Sidebar.css";
 import { useAppContext } from "../context/appContext";
 
 const Sidebar = () => {

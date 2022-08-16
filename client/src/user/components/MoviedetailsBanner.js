@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/css/Moviedetails/Moviedetails.css";
+import "../css/Moviedetails/Moviedetails.css";
 import Button from "react-bootstrap/Button";
 import { BsFillPlayFill } from "react-icons/bs";
 import { RiHeartFill } from "react-icons/ri";

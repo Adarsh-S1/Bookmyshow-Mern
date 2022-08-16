@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from "react-bootstrap/Button";
-import "../assets/css/Error/Error.css";
+import "../css/Error/Error.css";
 const Error = () => {
   return (
     <div className="Errorparent">

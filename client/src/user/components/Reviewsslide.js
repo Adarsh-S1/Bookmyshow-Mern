@@ -5,7 +5,7 @@ import { RiHeartFill } from "react-icons/ri";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "../assets/css/Moviedetails/Aboutmovie.css";
+import "../css/Moviedetails/Aboutmovie.css";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 const Reviewsslide = () => {

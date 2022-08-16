@@ -4,7 +4,7 @@ import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "../assets/css/Moviedetails/Aboutmovie.css";
+import "../css/Moviedetails/Aboutmovie.css";
 
 const Offers = () => {
   return (

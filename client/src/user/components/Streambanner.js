@@ -1,5 +1,5 @@
 import React from 'react'
-import "../assets/css/Streambanner/Streambanner.css";
+import "../css/Streambanner/Streambanner.css";
 const Streambanner = () => {
   return (
     <div className="streambanner">
