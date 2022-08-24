@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "react-bootstrap/esm/Button";
 import { useAppContext } from "../context/appContext";
 const Loginmain = () => {
-  const { toggleSignin, toggleEmailLogin, otpVerify } = useAppContext();
+  const { toggleSignin, toggleEmailLogin, loginGoogle, phoneLogin } =
+    useAppContext();
+  const [phone, setPhone] = useState();
+
+  const handleChange = (e) => {
+    setPhone({ ...phone, [e.target.name]: e.target.value });
+  };
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    console.log(phone);
+    phoneLogin(phone)
+  }
   return (
     <>
       <svg onClick={toggleSignin} width="15" height="15">
@@ -14,22 +26,13 @@ const Loginmain = () => {
       </svg>
       <center>
         <h6 className="getstarted">Get Started</h6>
-        <div className="google">
+        <div onClick={loginGoogle} className="google">
           <img
             src="https://in.bmscdn.com/webin/common/icons/googlelogo.svg"
             alt=""
             srcSet=""
           />
           <h6>Continue with Google</h6>
-        </div>
-        <div className="google">
-          <img
-            className="facebook"
-            src="https://in.bmscdn.com/webin/common/icons/facebook.svg"
-            alt=""
-            srcSet=""
-          />
-          <h6>Continue with Facebook</h6>
         </div>
         <div onClick={toggleEmailLogin} className="google">
           <img
@@ -50,15 +53,17 @@ const Loginmain = () => {
           />{" "}
           <span className="countryCode">+91</span>
           <input
+            onChange={handleChange}
             className="mobile"
+            name="phone"
             placeholder="Continue with mobile number"
-            type="text"
+            type="number"
             maxLength="10"
             required
           />
         </div>
         <div className="signin">
-          <Button>Continue</Button>
+          <Button onClick={submitForm}>Continue</Button>
         </div>
         <p>
           I agree to the <u>Terms & Conditions</u> & <u>Privacy Policy</u>

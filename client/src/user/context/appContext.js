@@ -12,6 +12,7 @@ import {
   TOGGLE_EMAIL_ERROR,
 } from "./actions";
 import reducer from "./reducers";
+import { config } from "dotenv";
 const initialState = {
   showSidebar: true,
   showSignin: true,
@@ -40,6 +41,27 @@ const AppProvider = ({ children }) => {
   const axiosData = axios.create({
     baseURL: "http://localhost:5000",
   });
+
+  axiosData.interceptors.request.use(
+    (config) => {
+      config.headers.common["Authorization"] = `Bearer token`;
+      return config;
+    },
+    (error) => {
+      console.log(error);
+      return Promise.reject(error);
+    }
+  );
+  axiosData.interceptors.response.use(
+    (response) => {
+      return response;
+    },
+    (error) => {
+      console.log(error);
+      return Promise.reject(error);
+    }
+  );
+
   const toggleSidebar = () => {
     dispatch({ type: TOGGLE_SIDEBAR });
   };
@@ -85,6 +107,19 @@ const AppProvider = ({ children }) => {
     }
   };
 
+  const phoneLogin = async (phone) => {
+    try {
+      const { data } = await axiosData.post("/loginphone", phone);
+      console.log(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const loginGoogle = () => {
+    window.open("http://localhost:5000/google", "_self")
+    
+  };
   return (
     <Appcontext.Provider
       value={{
@@ -97,6 +132,8 @@ const AppProvider = ({ children }) => {
         verifyOtp,
         toggleWaitOtp,
         toggleEmailError,
+        loginGoogle,
+        phoneLogin,
       }}
     >
       {children}
