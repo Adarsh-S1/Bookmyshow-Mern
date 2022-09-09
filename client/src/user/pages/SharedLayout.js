@@ -6,8 +6,9 @@ import InternetError from "../components/InternetError";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import { useAppContext } from "../context/appContext";
+
 const SharedLayout = () => {
-  const { toggleSidebar, showSidebar } = useAppContext();
+  const { showSidebar, toggleSidebar } = useAppContext();
 
   return (
     <div>
@@ -17,7 +18,7 @@ const SharedLayout = () => {
       </div>
       <div onClick={!showSidebar ? toggleSidebar : console.log()}>
         {/* <Online> */}
-          <Outlet />
+        <Outlet />
         {/* </Online> */}
         {/* <Offline>
           <InternetError />

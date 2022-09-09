@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/esm/Button";
 import { useAppContext } from "../context/appContext";
 const Loginmain = () => {
-  const { toggleSignin, toggleEmailLogin, loginGoogle, phoneLogin } =
-    useAppContext();
+  const {
+    toggleSignin,
+    toggleEmailLogin,
+    loginGoogle,
+    loginUser,
+    emailError,
+    waitOtp,
+    toggleEmailError,
+    toggleWaitOtp,
+  } = useAppContext();
   const [phone, setPhone] = useState();
 
   const handleChange = (e) => {
@@ -12,9 +20,15 @@ const Loginmain = () => {
 
   const submitForm = (e) => {
     e.preventDefault();
-    console.log(phone);
-    phoneLogin(phone)
-  }
+    if (phone) {
+      loginUser(phone);
+      if (emailError == true) {
+        toggleEmailError();
+      }
+      toggleWaitOtp();
+    } else console.log("Nothing");
+  };
+
   return (
     <>
       <svg onClick={toggleSignin} width="15" height="15">
@@ -62,6 +76,10 @@ const Loginmain = () => {
             required
           />
         </div>
+        {waitOtp && <p className="alert">Validating your email ⌛....</p>}
+        {emailError && (
+          <p className="alert error">Please enter a valid email</p>
+        )}
         <div className="signin">
           <Button onClick={submitForm}>Continue</Button>
         </div>

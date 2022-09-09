@@ -1,17 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/esm/Button";
 import OtpInput from "react-otp-input";
 import { useAppContext } from "../context/appContext";
 
 const Loginotp = () => {
-  const { otpVerify, toggleOtpVerify, verifyOtp } = useAppContext();
+  const { otpVerify, toggleOtpVerify, verifyOtp, user,type } = useAppContext();
   const [otp, setOtp] = useState("");
+  const navigate = useNavigate();
 
   const handleChange = (otp) => setOtp(otp);
   const submitForm = (e) => {
     e.preventDefault();
-    verifyOtp(otp)
+    verifyOtp(otp);
   };
+
+  useEffect(() => {
+    if (user) {
+      if (Object.values(user).every((o) => o != null) === false) {
+        navigate(`/register/${btoa(JSON.stringify(user))}`);
+      }
+    }
+  }, [user, navigate]);
+
   return (
     <div className="loginotp">
       <svg
@@ -28,7 +39,7 @@ c-2.1,1-4.1,0.6-5.9-0.8c-0.3-0.2-0.5-0.5-0.8-0.7C53.2,83.2,38.5,68.5,23.8,53.8c-
 C44.5,25.4,53.3,16.6,62,7.8c2-2,4-4,6-6C69.2,0.7,70.6,0,72.7,0z"
         ></path>
       </svg>
-      <h2>Verify your Email address</h2>
+      <h2>Verify your {type ? "Email address" : "Phone number"}</h2>
       <br />
       <center>
         <OtpInput

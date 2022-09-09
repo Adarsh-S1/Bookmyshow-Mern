@@ -81,23 +81,7 @@ const Sidebar = () => {
               </span>
             </MenuItem>
 
-            <MenuItem
-              suffix={
-                <img
-                  height="20px"
-                  width="auto"
-                  src="https://assets-in.bmscdn.com/members/common/icons/streamlibrary.png"
-                  alt=""
-                />
-              }
-              className="notifications"
-              icon={<MdOutlineKeyboardArrowRight />}
-            >
-              <Link to="/stream-library" />
-              Stream Library
-              <br />
-              <span className="menuspan">Rented & Purchased movies</span>
-            </MenuItem>
+           
 
             <MenuItem
               suffix={<BsChatDots />}

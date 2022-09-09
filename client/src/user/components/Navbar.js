@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom"
+import React,{useEffect} from "react";
+import { Link,useNavigate } from "react-router-dom"
 import { CSSTransition } from "react-transition-group";
 import "../css/Navbar/Navbar.css";
 import "../css/Login/Login.css";
@@ -7,7 +7,16 @@ import { useAppContext } from "../context/appContext";
 import Login from "./Login";
 
 const Navbar = () => {
-  const { toggleSidebar,toggleSignin,showSignin} = useAppContext()
+  const { toggleSidebar,toggleSignin,showSignin,user} = useAppContext()
+  const navigate = useNavigate();
+  
+  useEffect(() => {
+    if (user) {
+      if (Object.values(user).every((o) => o != null) === false) {
+        navigate(`/register/${btoa(JSON.stringify(user))}`);
+      }
+    }
+  }, [user, navigate]);
   return (
     <>
       <link
@@ -99,11 +108,7 @@ const Navbar = () => {
                 <li>
                   <Link to="/booked-shows">My Shows</Link>
                 </li>
-                <li>
-                  <Link to="/list-stream-movies">
-                    Stream<sup>NEW</sup>
-                  </Link>
-                </li>
+              
               </ul>
               <ul id="navbar_right" className="nav navbar-nav">
                 <div

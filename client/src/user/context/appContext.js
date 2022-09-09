@@ -1,4 +1,5 @@
 import React, { useReducer, useContext } from "react";
+import reducer from "./reducers";
 import axios from "axios";
 import {
   TOGGLE_SIDEBAR,
@@ -11,8 +12,8 @@ import {
   TOGGLE_WAIT_OTP,
   TOGGLE_EMAIL_ERROR,
 } from "./actions";
-import reducer from "./reducers";
-import { config } from "dotenv";
+
+let user = localStorage.getItem("user");
 const initialState = {
   showSidebar: true,
   showSignin: true,
@@ -20,18 +21,8 @@ const initialState = {
   otpVerify: false,
   waitOtp: false,
   emailError: false,
-  user: {
-    firstName: "Adarsh",
-    lastName: "S",
-    email: "adarsh@gmail.com",
-    phone: 6282340803,
-    dob: "24/07/2004",
-    gender: "Male",
-    locality: "Tarur",
-    district: "Palakkad",
-    state: "Kerala",
-    pincode: 678544,
-  },
+  loginType: true,
+  user: user ? JSON.parse(user) : null,
 };
 
 const Appcontext = React.createContext();
@@ -44,7 +35,9 @@ const AppProvider = ({ children }) => {
 
   axiosData.interceptors.request.use(
     (config) => {
-      config.headers.common["Authorization"] = `Bearer token`;
+      if (state.user != null) {
+        config.headers.common["Authorization"] = `Bearer ${state.user.token}`;
+      }
       return config;
     },
     (error) => {
@@ -61,6 +54,10 @@ const AppProvider = ({ children }) => {
       return Promise.reject(error);
     }
   );
+
+  const saveUser = (user) => {
+    localStorage.setItem("user", user);
+  };
 
   const toggleSidebar = () => {
     dispatch({ type: TOGGLE_SIDEBAR });
@@ -81,13 +78,26 @@ const AppProvider = ({ children }) => {
     dispatch({ type: TOGGLE_EMAIL_ERROR });
   };
 
-  const loginUser = async ({ email }) => {
+  const loginUser = async ({ email, phone }) => {
     try {
-      const { data } = await axiosData.post("/loginemail", { email });
-      if (data == true) {
-        dispatch({ type: LOGIN_USER_BEGIN });
-      } else {
-        dispatch({ type: TOGGLE_EMAIL_ERROR });
+      if (email) {
+        state.type = true;
+        const { data } = await axiosData.post("/loginemail", { email });
+        if (data == true) {
+          dispatch({ type: LOGIN_USER_BEGIN });
+        } else {
+          dispatch({ type: TOGGLE_EMAIL_ERROR });
+        }
+      }
+      else if (phone) {
+        state.type = false;
+        const { data } = await axiosData.post("/loginphone", { phone });
+        console.log(data);
+        if (data == true) {
+          dispatch({ type: LOGIN_USER_BEGIN });
+        } else {
+          dispatch({ type: TOGGLE_EMAIL_ERROR });
+        }
       }
     } catch (err) {
       console.log(err);
@@ -96,9 +106,9 @@ const AppProvider = ({ children }) => {
   const verifyOtp = async (otp) => {
     try {
       const { data } = await axiosData.post("otpverify", { otp });
-      if (data.status === "success") {
-        console.log("success");
-        localStorage.setItem("email", JSON.parse(data.email));
+      if (!data.error) {
+        saveUser(JSON.stringify(data.res));
+        dispatch({ type: LOGIN_USER_SUCCESS, payload: { user: data.res } });
       } else {
         console.log("failed");
       }
@@ -107,19 +117,14 @@ const AppProvider = ({ children }) => {
     }
   };
 
-  const phoneLogin = async (phone) => {
-    try {
-      const { data } = await axiosData.post("/loginphone", phone);
-      console.log(data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
 
   const loginGoogle = () => {
-    window.open("http://localhost:5000/google", "_self")
-    
+    window.open("http://localhost:5000/google", "_self");
   };
+
+  const registerUser = async (userData) => {
+   const { data } = await axiosData.post("register",  userData );
+  }
   return (
     <Appcontext.Provider
       value={{
@@ -133,7 +138,8 @@ const AppProvider = ({ children }) => {
         toggleWaitOtp,
         toggleEmailError,
         loginGoogle,
-        phoneLogin,
+        saveUser,
+        registerUser,
       }}
     >
       {children}

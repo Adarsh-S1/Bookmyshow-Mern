@@ -1,14 +1,13 @@
-import React from 'react'
+import React from "react";
 import Navigationbar from "../components/Navigationbar";
 import Homebanner from "../components/Homebanner";
-import Recommended from '../components/Recommended';
-import Ads from '../components/Ads';
-import Streambanner from '../components/Streambanner';
-import Otherlanguages from '../components/Otherlanguages';
-import Streammovies from '../components/Streammovies';
-import Entertainment from '../components/Entertainment';
+import Recommended from "../components/Recommended";
+import Ads from "../components/Ads";
+import Streambanner from "../components/Streambanner";
+import Otherlanguages from "../components/Otherlanguages";
+import Streammovies from "../components/Streammovies";
+import Entertainment from "../components/Entertainment";
 const Home = () => {
-
   return (
     <div style={{ backgroundColor: "#f4f4f4" }}>
       <Homebanner />
@@ -21,6 +20,6 @@ const Home = () => {
       <Otherlanguages />
     </div>
   );
-}
+};
 
-export default Home
+export default Home;

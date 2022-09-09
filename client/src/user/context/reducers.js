@@ -53,6 +53,13 @@ const reducer = (state, action) => {
       otpVerify: !state.otpVerify,
     };
   }
+  if (action.type === LOGIN_USER_SUCCESS) {
+     return {
+       ...state,
+       showSignin: !state.showSignin,
+       user:action.payload.user
+     };
+   }
 };
 
 export default reducer;
